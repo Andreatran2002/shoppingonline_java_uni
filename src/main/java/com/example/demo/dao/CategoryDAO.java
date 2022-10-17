@@ -1,8 +1,6 @@
-package com.example.demo.admin.dao;
-
-import com.example.demo.admin.connection.DBConnection;
+package com.example.demo.dao;
 import com.example.demo.admin.dao.interfaces.ICategoryDAO;
-import com.example.demo.admin.model.Category;
+import com.example.demo.model.Category;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

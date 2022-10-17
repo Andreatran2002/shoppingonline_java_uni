@@ -1,4 +1,4 @@
-package com.example.demo.admin.model;
+package com.example.demo.model;
 
 public class Category {
     private int cateid;

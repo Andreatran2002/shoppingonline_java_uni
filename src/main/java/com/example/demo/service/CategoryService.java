@@ -1,9 +1,9 @@
-package com.example.demo.admin.service;
+package com.example.demo.service;
 
-import com.example.demo.admin.dao.CategoryDAO;
-import com.example.demo.admin.model.Category;
+import com.example.demo.dao.CategoryDAO;
+import com.example.demo.model.Category;
 import com.example.demo.admin.dao.interfaces.ICategoryDAO;
-import com.example.demo.admin.service.interfaces.ICategoryService;
+import com.example.demo.service.interfaces.ICategoryService;
 
 import java.io.File;
 import java.util.List;

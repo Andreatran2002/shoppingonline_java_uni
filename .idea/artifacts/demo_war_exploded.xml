@@ -14,8 +14,11 @@
           <element id="module-output" name="demo" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: javax.servlet.jsp:javax.servlet.jsp-api:2.3.3" />
           <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
           <element id="library" level="project" name="Maven: com.microsoft.sqlserver:mssql-jdbc:11.2.1.jre11" />
+          <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.4" />
+          <element id="library" level="project" name="Maven: commons-io:commons-io:2.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">

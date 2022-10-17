@@ -1,10 +1,10 @@
-package com.example.demo.admin.dao.interfaces;
+package com.example.demo.service.interfaces;
 
-import com.example.demo.admin.model.Category;
+import com.example.demo.model.Category;
 
 import java.util.List;
 
-public interface ICategoryDAO {
+public interface ICategoryService {
     void insert(Category category);
     void edit(Category category);
     void delete(int id);

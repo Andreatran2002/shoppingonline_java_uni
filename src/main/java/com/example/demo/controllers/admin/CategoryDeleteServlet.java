@@ -1,7 +1,7 @@
-package com.example.demo.admin.controllers;
+package com.example.demo.controllers.admin;
 
-import com.example.demo.admin.service.CategoryService;
-import com.example.demo.admin.service.interfaces.ICategoryService;
+import com.example.demo.service.CategoryService;
+import com.example.demo.service.interfaces.ICategoryService;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
