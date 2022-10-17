@@ -1,19 +1,20 @@
 package com.example.demo.service;
 
+import com.example.demo.common.Constant;
 import com.example.demo.dao.CategoryDAO;
 import com.example.demo.model.Category;
-import com.example.demo.admin.dao.interfaces.ICategoryDAO;
+import com.example.demo.dao.interfaces.ICategoryDAO;
 import com.example.demo.service.interfaces.ICategoryService;
 
 import java.io.File;
 import java.util.List;
 
 public class CategoryService  implements ICategoryService {
-    public String link = "/Users/andreatran/StudySpace/School/hk1_3/web/testFile";
     ICategoryDAO categoryDAO = new CategoryDAO();
 
     @Override
     public void insert(Category category) {
+        System.out.print(category);
         categoryDAO.insert(category);
     }
 
@@ -22,14 +23,14 @@ public class CategoryService  implements ICategoryService {
         Category oldCategory = categoryDAO.get(category.getCateid());
         oldCategory.setCatename(category.getCatename());
         oldCategory.setStatus(category.getStatus());
-        if (category.getImages() != null) {
-            String fileName = oldCategory.getImages();
-            final String dir = link+"/upload";
+        if (category.getIcon() != null) {
+            String fileName = oldCategory.getIcon();
+            final String dir = Constant.path  ;
             File file = new File(dir + "/category" + fileName);
             if (file.exists()) {
                 file.delete();
             }
-            oldCategory.setImages(category.getImages());
+            oldCategory.setIcon(category.getIcon());
         }
         categoryDAO.edit(oldCategory);
 

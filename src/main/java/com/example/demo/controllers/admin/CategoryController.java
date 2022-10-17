@@ -17,9 +17,14 @@ public class CategoryController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse
             resp) throws IOException, ServletException {
+
         List<Category> cateList = cateService.getAll();
+
         resp.setContentType("text/html");
         System.out.println(cateList) ;
+        System.out.println("HIHIHI");
+
+
         req.setAttribute("cateList", cateList);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/views/admin/list-category.jsp");
         dispatcher.forward(req, resp);

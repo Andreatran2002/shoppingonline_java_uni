@@ -1,4 +1,4 @@
-package com.example.demo.admin.dao.interfaces;
+package com.example.demo.dao.interfaces;
 
 import com.example.demo.model.Category;
 

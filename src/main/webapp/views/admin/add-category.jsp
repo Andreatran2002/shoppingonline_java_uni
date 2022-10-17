@@ -23,6 +23,5 @@
     <button type="submit" class="btn btn-default">Thêm</button>
     <button type="reset" class="btn btn-primary">Hủy</button>
 </form>
-
 </body>
 </html>

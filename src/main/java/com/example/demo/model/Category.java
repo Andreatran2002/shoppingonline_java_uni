@@ -3,14 +3,24 @@ package com.example.demo.model;
 public class Category {
     private int cateid;
     private String catename;
-    private String status;
-    private String images ;
+    private int status;
+    private String icon ;
 
-    public Category(int cateid, String catename, String icon, String images) {
+    @Override
+    public String toString() {
+        return "Category{" +
+                "cateid=" + cateid +
+                ", catename='" + catename + '\'' +
+                ", status=" + status +
+                ", icon='" + icon + '\'' +
+                '}';
+    }
+
+    public Category(int cateid, String catename, String icon, int status ) {
         this.cateid = cateid;
         this.catename = catename;
-        this.status = icon;
-        this.images = images;
+        this.status = status;
+        this.icon = icon;
     }
 
     public Category() {
@@ -33,29 +43,19 @@ public class Category {
         this.catename = catename;
     }
 
-    public String getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(String icon) {
-        this.status = icon;
+    public void setStatus(int status) {
+        this.status = status;
     }
 
-    @Override
-    public String toString() {
-        return "Category{" +
-                "cateid=" + cateid +
-                ", catename='" + catename + '\'' +
-                ", status='" + status + '\'' +
-                ", images='" + images + '\'' +
-                '}';
+    public String getIcon() {
+        return icon;
     }
 
-    public String getImages() {
-        return images;
-    }
-
-    public void setImages(String images) {
-        this.images = images;
+    public void setIcon(String icon) {
+        this.icon = icon;
     }
 }
