@@ -42,9 +42,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Boolean isAuthenticated(String name, String password) {
-        User user = userRepository.findUserByName(name);
+        User user = userRepository.findUserByName(name.trim());
         if (user == null ) return false;
-        if (user.getPassword() == password){
+        if (user.getPassword().equals(password.trim())){
             return true;
         }
         else{
