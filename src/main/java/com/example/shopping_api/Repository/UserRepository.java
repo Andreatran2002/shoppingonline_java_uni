@@ -1,6 +1,5 @@
 package com.example.shopping_api.Repository;
 
-import com.example.shopping_api.Repository.CustomRepository.UserRepositoryCustom;
 import com.example.shopping_api.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

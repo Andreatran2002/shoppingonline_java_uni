@@ -3,7 +3,7 @@ package com.example.shopping_api.controller.web;
 
 
 import com.example.shopping_api.Service.UserService;
-import com.example.shopping_api.model.LoginRequest;
+import com.example.shopping_api.model.Request.LoginRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
