@@ -1,5 +1,6 @@
 package com.example.shopping_api.Service;
 
+import com.example.shopping_api.model.Request.SignUpRequest;
 import com.example.shopping_api.model.User;
 
 import java.util.List;
@@ -12,4 +13,5 @@ public interface UserService {
     User update(User user);
     void delete(User user);
     Boolean isAuthenticated(String name, String password);
+    Boolean signUp(User user);
 }

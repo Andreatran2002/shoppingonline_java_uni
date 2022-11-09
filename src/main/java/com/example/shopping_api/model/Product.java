@@ -48,13 +48,10 @@ public class Product {
     @Column(name = "status")
     private Integer status;
 
-    @Column(name = "createDate")
+    @Column(name = "createdate")
     private Date createDate;
 
-    @Column(name = "sellerId")
+    @Column(name = "seller_id")
     private Integer sellerId;
 
-
-    @Column(name = "city")
-    private String city;
 }

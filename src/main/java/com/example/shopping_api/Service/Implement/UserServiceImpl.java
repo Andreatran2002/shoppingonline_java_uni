@@ -2,6 +2,7 @@ package com.example.shopping_api.Service.Implement;
 
 import com.example.shopping_api.Repository.UserRepository;
 import com.example.shopping_api.Service.UserService;
+import com.example.shopping_api.model.Request.SignUpRequest;
 import com.example.shopping_api.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -50,5 +51,16 @@ public class UserServiceImpl implements UserService {
         else{
             return false;
         }
+    }
+
+    @Override
+    public Boolean signUp(User user) {
+        User k = userRepository.findUserByName(user.getName().trim());
+        if (user == null )  {
+            userRepository.save(user);
+            return true;
+        }
+
+        return false;
     }
 }
