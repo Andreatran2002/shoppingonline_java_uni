@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.Instant;
 import java.util.Date;
 
 @Entity
@@ -25,7 +26,7 @@ public class Product {
     private String code;
 
     @Column(name = "cate_id")
-    private String cateId;
+    private Integer cateId;
 
     @Column(name = "description")
     private String description;
@@ -49,9 +50,26 @@ public class Product {
     private Integer status;
 
     @Column(name = "createdate")
-    private Date createDate;
+    private Date createDate = Date.from(Instant.now());
 
     @Column(name = "seller_id")
     private Integer sellerId;
 
+    public Product(String name, String code, Integer cateId, String description, Float price, Integer amount, Integer stock, String image, Integer wishlist, Integer status, Integer sellerId) {
+        this.name = name;
+        this.code = code;
+        this.cateId = cateId;
+        this.description = description;
+        this.price = price;
+        this.amount = amount;
+        this.stock = stock;
+        this.image = image;
+        this.wishlist = wishlist;
+        this.status = status;
+        this.sellerId = sellerId;
+    }
+
+    public Product() {
+
+    }
 }

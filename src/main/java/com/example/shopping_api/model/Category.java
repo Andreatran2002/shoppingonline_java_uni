@@ -23,6 +23,16 @@ public class Category {
     @Column(name = "image")
     private String icon;
 
+    public Category(String name, String icon, Integer status) {
+        this.name = name;
+        this.icon = icon;
+        this.status = status;
+    }
+
     @Column(name = "status")
     private Integer status;
+
+    public Category() {
+
+    }
 }
